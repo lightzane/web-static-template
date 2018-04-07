@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Template</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/material-icons.css"> <!-- IMPORTANT -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/flex-box.css">
+</head>
+<body style="background:#eee">
+
+	<div class="container flex-box-col" style="height:40%;background:#ddd">
+		<i id="preview" class="material-icons" style="font-size:48px;margin-bottom:10px;color:#34495e;"></i>
+		<samp id="preview-text">&lt;i class="material-icons"&gt;...&lt;/i&gt;</samp>
+		<style>
+			.search {
+				outline: none;
+				padding: 10px 20px;
+				padding-left:40px;
+				border-radius:3px;
+				border: none;
+				/*position: relative;
+				top: 50px;*/
+				margin-top: 50px;
+				min-width: 300px;
+				transition: 0.3s ease-out;
+				cursor:pointer;
+			}
+			.search:focus {
+				box-shadow:0 3px 5px rgba(0,0,0,0.3);
+				cursor:text;
+			}
+			.search-icon {
+				cursor:pointer;
+				position:absolute;
+				top:57px;
+				left:10px;
+				z-index:1;
+				opacity: 0.5;
+			}
+		</style>
+		<div style="position:relative;">
+			<label class="search-icon" for="search">	
+				<i class="material-icons">search</i>
+			</label>
+			<input id="search" class="search" placeholder="Search" /></div>
+		</div>
+	
+	<div class="container flex-box-row list" style="background:#eee">
+		<style>
+			.wrapper--material-icons {
+				display: inline-block;
+				/*border: 1px solid rgba(0,0,0,0.3);*/
+				margin: 20px;
+				padding: 5px;
+				text-align: center;
+				font-family:'Roboto';
+				word-wrap: break-word;
+				width: 60px;
+				height: 60px;
+				border-radius:3px;
+				cursor:pointer;
+				transition: 0.3s ease-out;
+			}
+			.wrapper--material-icons:hover {
+				box-shadow: 0 0 20px rgba(0,0,0,0.3);
+			}
+			.wrapper--material-icons i {
+				font-size: 48px;
+				color:rgba(0,0,0,0.54);
+			}
+		</style>
+		<!--
+			<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="$&"><i class="material-icons">$&</i></div>
+		-->
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="3d_rotation"><i class="material-icons">3d_rotation</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="ac_unit"><i class="material-icons">ac_unit</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="access_alarm"><i class="material-icons">access_alarm</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="access_alarms"><i class="material-icons">access_alarms</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="access_time"><i class="material-icons">access_time</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="accessibility"><i class="material-icons">accessibility</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="accessible"><i class="material-icons">accessible</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="account_balance"><i class="material-icons">account_balance</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="account_balance_wallet"><i class="material-icons">account_balance_wallet</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="account_box"><i class="material-icons">account_box</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="account_circle"><i class="material-icons">account_circle</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="adb"><i class="material-icons">adb</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="add"><i class="material-icons">add</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="add_a_photo"><i class="material-icons">add_a_photo</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="add_alarm"><i class="material-icons">add_alarm</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="add_alert"><i class="material-icons">add_alert</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="add_box"><i class="material-icons">add_box</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="add_circle"><i class="material-icons">add_circle</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="add_circle_outline"><i class="material-icons">add_circle_outline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="add_location"><i class="material-icons">add_location</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="add_shopping_cart"><i class="material-icons">add_shopping_cart</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="add_to_photos"><i class="material-icons">add_to_photos</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="add_to_queue"><i class="material-icons">add_to_queue</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="adjust"><i class="material-icons">adjust</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="airline_seat_flat"><i class="material-icons">airline_seat_flat</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="airline_seat_flat_angled"><i class="material-icons">airline_seat_flat_angled</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="airline_seat_individual_suite"><i class="material-icons">airline_seat_individual_suite</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="airline_seat_legroom_extra"><i class="material-icons">airline_seat_legroom_extra</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="airline_seat_legroom_normal"><i class="material-icons">airline_seat_legroom_normal</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="airline_seat_legroom_reduced"><i class="material-icons">airline_seat_legroom_reduced</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="airline_seat_recline_extra"><i class="material-icons">airline_seat_recline_extra</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="airline_seat_recline_normal"><i class="material-icons">airline_seat_recline_normal</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="airplanemode_active"><i class="material-icons">airplanemode_active</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="airplanemode_inactive"><i class="material-icons">airplanemode_inactive</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="airplay"><i class="material-icons">airplay</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="airport_shuttle"><i class="material-icons">airport_shuttle</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="alarm"><i class="material-icons">alarm</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="alarm_add"><i class="material-icons">alarm_add</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="alarm_off"><i class="material-icons">alarm_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="alarm_on"><i class="material-icons">alarm_on</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="album"><i class="material-icons">album</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="all_inclusive"><i class="material-icons">all_inclusive</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="all_out"><i class="material-icons">all_out</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="android"><i class="material-icons">android</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="announcement"><i class="material-icons">announcement</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="apps"><i class="material-icons">apps</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="archive"><i class="material-icons">archive</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="arrow_back"><i class="material-icons">arrow_back</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="arrow_downward"><i class="material-icons">arrow_downward</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="arrow_drop_down"><i class="material-icons">arrow_drop_down</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="arrow_drop_down_circle"><i class="material-icons">arrow_drop_down_circle</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="arrow_drop_up"><i class="material-icons">arrow_drop_up</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="arrow_forward"><i class="material-icons">arrow_forward</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="arrow_upward"><i class="material-icons">arrow_upward</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="art_track"><i class="material-icons">art_track</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="aspect_ratio"><i class="material-icons">aspect_ratio</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="assessment"><i class="material-icons">assessment</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="assignment"><i class="material-icons">assignment</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="assignment_ind"><i class="material-icons">assignment_ind</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="assignment_late"><i class="material-icons">assignment_late</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="assignment_return"><i class="material-icons">assignment_return</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="assignment_returned"><i class="material-icons">assignment_returned</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="assignment_turned_in"><i class="material-icons">assignment_turned_in</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="assistant"><i class="material-icons">assistant</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="assistant_photo"><i class="material-icons">assistant_photo</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="attach_file"><i class="material-icons">attach_file</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="attach_money"><i class="material-icons">attach_money</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="attachment"><i class="material-icons">attachment</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="audiotrack"><i class="material-icons">audiotrack</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="autorenew"><i class="material-icons">autorenew</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="av_timer"><i class="material-icons">av_timer</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="backspace"><i class="material-icons">backspace</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="backup"><i class="material-icons">backup</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="battery_alert"><i class="material-icons">battery_alert</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="battery_charging_full"><i class="material-icons">battery_charging_full</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="battery_full"><i class="material-icons">battery_full</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="battery_std"><i class="material-icons">battery_std</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="battery_unknown"><i class="material-icons">battery_unknown</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="beach_access"><i class="material-icons">beach_access</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="beenhere"><i class="material-icons">beenhere</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="block"><i class="material-icons">block</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="bluetooth"><i class="material-icons">bluetooth</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="bluetooth_audio"><i class="material-icons">bluetooth_audio</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="bluetooth_connected"><i class="material-icons">bluetooth_connected</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="bluetooth_disabled"><i class="material-icons">bluetooth_disabled</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="bluetooth_searching"><i class="material-icons">bluetooth_searching</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="blur_circular"><i class="material-icons">blur_circular</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="blur_linear"><i class="material-icons">blur_linear</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="blur_off"><i class="material-icons">blur_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="blur_on"><i class="material-icons">blur_on</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="book"><i class="material-icons">book</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="bookmark"><i class="material-icons">bookmark</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="bookmark_border"><i class="material-icons">bookmark_border</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="border_all"><i class="material-icons">border_all</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="border_bottom"><i class="material-icons">border_bottom</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="border_clear"><i class="material-icons">border_clear</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="border_color"><i class="material-icons">border_color</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="border_horizontal"><i class="material-icons">border_horizontal</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="border_inner"><i class="material-icons">border_inner</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="border_left"><i class="material-icons">border_left</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="border_outer"><i class="material-icons">border_outer</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="border_right"><i class="material-icons">border_right</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="border_style"><i class="material-icons">border_style</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="border_top"><i class="material-icons">border_top</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="border_vertical"><i class="material-icons">border_vertical</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="branding_watermark"><i class="material-icons">branding_watermark</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="brightness_1"><i class="material-icons">brightness_1</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="brightness_2"><i class="material-icons">brightness_2</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="brightness_3"><i class="material-icons">brightness_3</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="brightness_4"><i class="material-icons">brightness_4</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="brightness_5"><i class="material-icons">brightness_5</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="brightness_6"><i class="material-icons">brightness_6</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="brightness_7"><i class="material-icons">brightness_7</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="brightness_auto"><i class="material-icons">brightness_auto</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="brightness_high"><i class="material-icons">brightness_high</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="brightness_low"><i class="material-icons">brightness_low</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="brightness_medium"><i class="material-icons">brightness_medium</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="broken_image"><i class="material-icons">broken_image</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="brush"><i class="material-icons">brush</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="bubble_chart"><i class="material-icons">bubble_chart</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="bug_report"><i class="material-icons">bug_report</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="build"><i class="material-icons">build</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="burst_mode"><i class="material-icons">burst_mode</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="business"><i class="material-icons">business</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="business_center"><i class="material-icons">business_center</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="cached"><i class="material-icons">cached</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="cake"><i class="material-icons">cake</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="call"><i class="material-icons">call</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="call_end"><i class="material-icons">call_end</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="call_made"><i class="material-icons">call_made</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="call_merge"><i class="material-icons">call_merge</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="call_missed"><i class="material-icons">call_missed</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="call_missed_outgoing"><i class="material-icons">call_missed_outgoing</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="call_received"><i class="material-icons">call_received</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="call_split"><i class="material-icons">call_split</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="call_to_action"><i class="material-icons">call_to_action</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="camera"><i class="material-icons">camera</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="camera_alt"><i class="material-icons">camera_alt</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="camera_enhance"><i class="material-icons">camera_enhance</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="camera_front"><i class="material-icons">camera_front</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="camera_rear"><i class="material-icons">camera_rear</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="camera_roll"><i class="material-icons">camera_roll</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="cancel"><i class="material-icons">cancel</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="card_giftcard"><i class="material-icons">card_giftcard</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="card_membership"><i class="material-icons">card_membership</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="card_travel"><i class="material-icons">card_travel</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="casino"><i class="material-icons">casino</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="cast"><i class="material-icons">cast</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="cast_connected"><i class="material-icons">cast_connected</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="center_focus_strong"><i class="material-icons">center_focus_strong</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="center_focus_weak"><i class="material-icons">center_focus_weak</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="change_history"><i class="material-icons">change_history</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="chat"><i class="material-icons">chat</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="chat_bubble"><i class="material-icons">chat_bubble</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="chat_bubble_outline"><i class="material-icons">chat_bubble_outline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="check"><i class="material-icons">check</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="check_box"><i class="material-icons">check_box</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="check_box_outline_blank"><i class="material-icons">check_box_outline_blank</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="check_circle"><i class="material-icons">check_circle</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="chevron_left"><i class="material-icons">chevron_left</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="chevron_right"><i class="material-icons">chevron_right</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="child_care"><i class="material-icons">child_care</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="child_friendly"><i class="material-icons">child_friendly</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="chrome_reader_mode"><i class="material-icons">chrome_reader_mode</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="class"><i class="material-icons">class</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="clear"><i class="material-icons">clear</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="clear_all"><i class="material-icons">clear_all</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="close"><i class="material-icons">close</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="closed_caption"><i class="material-icons">closed_caption</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="cloud"><i class="material-icons">cloud</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="cloud_circle"><i class="material-icons">cloud_circle</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="cloud_done"><i class="material-icons">cloud_done</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="cloud_download"><i class="material-icons">cloud_download</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="cloud_off"><i class="material-icons">cloud_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="cloud_queue"><i class="material-icons">cloud_queue</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="cloud_upload"><i class="material-icons">cloud_upload</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="code"><i class="material-icons">code</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="collections"><i class="material-icons">collections</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="collections_bookmark"><i class="material-icons">collections_bookmark</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="color_lens"><i class="material-icons">color_lens</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="colorize"><i class="material-icons">colorize</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="comment"><i class="material-icons">comment</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="compare"><i class="material-icons">compare</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="compare_arrows"><i class="material-icons">compare_arrows</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="computer"><i class="material-icons">computer</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="confirmation_number"><i class="material-icons">confirmation_number</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="contact_mail"><i class="material-icons">contact_mail</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="contact_phone"><i class="material-icons">contact_phone</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="contacts"><i class="material-icons">contacts</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="content_copy"><i class="material-icons">content_copy</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="content_cut"><i class="material-icons">content_cut</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="content_paste"><i class="material-icons">content_paste</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="control_point"><i class="material-icons">control_point</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="control_point_duplicate"><i class="material-icons">control_point_duplicate</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="copyright"><i class="material-icons">copyright</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="create"><i class="material-icons">create</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="create_new_folder"><i class="material-icons">create_new_folder</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="credit_card"><i class="material-icons">credit_card</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="crop"><i class="material-icons">crop</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="crop_16_9"><i class="material-icons">crop_16_9</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="crop_3_2"><i class="material-icons">crop_3_2</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="crop_5_4"><i class="material-icons">crop_5_4</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="crop_7_5"><i class="material-icons">crop_7_5</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="crop_din"><i class="material-icons">crop_din</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="crop_free"><i class="material-icons">crop_free</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="crop_landscape"><i class="material-icons">crop_landscape</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="crop_original"><i class="material-icons">crop_original</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="crop_portrait"><i class="material-icons">crop_portrait</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="crop_rotate"><i class="material-icons">crop_rotate</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="crop_square"><i class="material-icons">crop_square</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="dashboard"><i class="material-icons">dashboard</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="data_usage"><i class="material-icons">data_usage</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="date_range"><i class="material-icons">date_range</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="dehaze"><i class="material-icons">dehaze</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="delete"><i class="material-icons">delete</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="delete_forever"><i class="material-icons">delete_forever</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="delete_sweep"><i class="material-icons">delete_sweep</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="description"><i class="material-icons">description</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="desktop_mac"><i class="material-icons">desktop_mac</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="desktop_windows"><i class="material-icons">desktop_windows</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="details"><i class="material-icons">details</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="developer_board"><i class="material-icons">developer_board</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="developer_mode"><i class="material-icons">developer_mode</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="device_hub"><i class="material-icons">device_hub</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="devices"><i class="material-icons">devices</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="devices_other"><i class="material-icons">devices_other</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="dialer_sip"><i class="material-icons">dialer_sip</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="dialpad"><i class="material-icons">dialpad</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="directions"><i class="material-icons">directions</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="directions_bike"><i class="material-icons">directions_bike</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="directions_boat"><i class="material-icons">directions_boat</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="directions_bus"><i class="material-icons">directions_bus</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="directions_car"><i class="material-icons">directions_car</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="directions_railway"><i class="material-icons">directions_railway</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="directions_run"><i class="material-icons">directions_run</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="directions_subway"><i class="material-icons">directions_subway</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="directions_transit"><i class="material-icons">directions_transit</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="directions_walk"><i class="material-icons">directions_walk</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="disc_full"><i class="material-icons">disc_full</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="dns"><i class="material-icons">dns</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="do_not_disturb"><i class="material-icons">do_not_disturb</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="do_not_disturb_alt"><i class="material-icons">do_not_disturb_alt</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="do_not_disturb_off"><i class="material-icons">do_not_disturb_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="do_not_disturb_on"><i class="material-icons">do_not_disturb_on</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="dock"><i class="material-icons">dock</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="domain"><i class="material-icons">domain</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="done"><i class="material-icons">done</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="done_all"><i class="material-icons">done_all</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="donut_large"><i class="material-icons">donut_large</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="donut_small"><i class="material-icons">donut_small</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="drafts"><i class="material-icons">drafts</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="drag_handle"><i class="material-icons">drag_handle</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="drive_eta"><i class="material-icons">drive_eta</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="dvr"><i class="material-icons">dvr</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="edit"><i class="material-icons">edit</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="edit_location"><i class="material-icons">edit_location</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="eject"><i class="material-icons">eject</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="email"><i class="material-icons">email</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="enhanced_encryption"><i class="material-icons">enhanced_encryption</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="equalizer"><i class="material-icons">equalizer</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="error"><i class="material-icons">error</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="error_outline"><i class="material-icons">error_outline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="euro_symbol"><i class="material-icons">euro_symbol</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="ev_station"><i class="material-icons">ev_station</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="event"><i class="material-icons">event</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="event_available"><i class="material-icons">event_available</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="event_busy"><i class="material-icons">event_busy</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="event_note"><i class="material-icons">event_note</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="event_seat"><i class="material-icons">event_seat</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="exit_to_app"><i class="material-icons">exit_to_app</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="expand_less"><i class="material-icons">expand_less</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="expand_more"><i class="material-icons">expand_more</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="explicit"><i class="material-icons">explicit</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="explore"><i class="material-icons">explore</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="exposure"><i class="material-icons">exposure</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="exposure_neg_1"><i class="material-icons">exposure_neg_1</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="exposure_neg_2"><i class="material-icons">exposure_neg_2</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="exposure_plus_1"><i class="material-icons">exposure_plus_1</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="exposure_plus_2"><i class="material-icons">exposure_plus_2</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="exposure_zero"><i class="material-icons">exposure_zero</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="extension"><i class="material-icons">extension</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="face"><i class="material-icons">face</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="fast_forward"><i class="material-icons">fast_forward</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="fast_rewind"><i class="material-icons">fast_rewind</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="favorite"><i class="material-icons">favorite</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="favorite_border"><i class="material-icons">favorite_border</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="featured_play_list"><i class="material-icons">featured_play_list</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="featured_video"><i class="material-icons">featured_video</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="feedback"><i class="material-icons">feedback</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="fiber_dvr"><i class="material-icons">fiber_dvr</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="fiber_manual_record"><i class="material-icons">fiber_manual_record</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="fiber_new"><i class="material-icons">fiber_new</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="fiber_pin"><i class="material-icons">fiber_pin</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="fiber_smart_record"><i class="material-icons">fiber_smart_record</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="file_download"><i class="material-icons">file_download</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="file_upload"><i class="material-icons">file_upload</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter"><i class="material-icons">filter</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_1"><i class="material-icons">filter_1</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_2"><i class="material-icons">filter_2</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_3"><i class="material-icons">filter_3</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_4"><i class="material-icons">filter_4</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_5"><i class="material-icons">filter_5</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_6"><i class="material-icons">filter_6</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_7"><i class="material-icons">filter_7</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_8"><i class="material-icons">filter_8</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_9"><i class="material-icons">filter_9</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_9_plus"><i class="material-icons">filter_9_plus</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_b_and_w"><i class="material-icons">filter_b_and_w</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_center_focus"><i class="material-icons">filter_center_focus</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_drama"><i class="material-icons">filter_drama</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_frames"><i class="material-icons">filter_frames</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_hdr"><i class="material-icons">filter_hdr</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_list"><i class="material-icons">filter_list</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_none"><i class="material-icons">filter_none</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_tilt_shift"><i class="material-icons">filter_tilt_shift</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="filter_vintage"><i class="material-icons">filter_vintage</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="find_in_page"><i class="material-icons">find_in_page</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="find_replace"><i class="material-icons">find_replace</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="fingerprint"><i class="material-icons">fingerprint</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="first_page"><i class="material-icons">first_page</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="fitness_center"><i class="material-icons">fitness_center</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="flag"><i class="material-icons">flag</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="flare"><i class="material-icons">flare</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="flash_auto"><i class="material-icons">flash_auto</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="flash_off"><i class="material-icons">flash_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="flash_on"><i class="material-icons">flash_on</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="flight"><i class="material-icons">flight</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="flight_land"><i class="material-icons">flight_land</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="flight_takeoff"><i class="material-icons">flight_takeoff</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="flip"><i class="material-icons">flip</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="flip_to_back"><i class="material-icons">flip_to_back</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="flip_to_front"><i class="material-icons">flip_to_front</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="folder"><i class="material-icons">folder</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="folder_open"><i class="material-icons">folder_open</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="folder_shared"><i class="material-icons">folder_shared</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="folder_special"><i class="material-icons">folder_special</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="font_download"><i class="material-icons">font_download</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_align_center"><i class="material-icons">format_align_center</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_align_justify"><i class="material-icons">format_align_justify</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_align_left"><i class="material-icons">format_align_left</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_align_right"><i class="material-icons">format_align_right</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_bold"><i class="material-icons">format_bold</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_clear"><i class="material-icons">format_clear</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_color_fill"><i class="material-icons">format_color_fill</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_color_reset"><i class="material-icons">format_color_reset</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_color_text"><i class="material-icons">format_color_text</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_indent_decrease"><i class="material-icons">format_indent_decrease</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_indent_increase"><i class="material-icons">format_indent_increase</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_italic"><i class="material-icons">format_italic</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_line_spacing"><i class="material-icons">format_line_spacing</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_list_bulleted"><i class="material-icons">format_list_bulleted</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_list_numbered"><i class="material-icons">format_list_numbered</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_paint"><i class="material-icons">format_paint</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_quote"><i class="material-icons">format_quote</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_shapes"><i class="material-icons">format_shapes</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_size"><i class="material-icons">format_size</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_strikethrough"><i class="material-icons">format_strikethrough</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_textdirection_l_to_r"><i class="material-icons">format_textdirection_l_to_r</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_textdirection_r_to_l"><i class="material-icons">format_textdirection_r_to_l</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="format_underlined"><i class="material-icons">format_underlined</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="forum"><i class="material-icons">forum</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="forward"><i class="material-icons">forward</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="forward_10"><i class="material-icons">forward_10</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="forward_30"><i class="material-icons">forward_30</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="forward_5"><i class="material-icons">forward_5</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="free_breakfast"><i class="material-icons">free_breakfast</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="fullscreen"><i class="material-icons">fullscreen</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="fullscreen_exit"><i class="material-icons">fullscreen_exit</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="functions"><i class="material-icons">functions</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="g_translate"><i class="material-icons">g_translate</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="gamepad"><i class="material-icons">gamepad</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="games"><i class="material-icons">games</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="gavel"><i class="material-icons">gavel</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="gesture"><i class="material-icons">gesture</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="get_app"><i class="material-icons">get_app</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="gif"><i class="material-icons">gif</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="golf_course"><i class="material-icons">golf_course</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="gps_fixed"><i class="material-icons">gps_fixed</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="gps_not_fixed"><i class="material-icons">gps_not_fixed</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="gps_off"><i class="material-icons">gps_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="grade"><i class="material-icons">grade</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="gradient"><i class="material-icons">gradient</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="grain"><i class="material-icons">grain</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="graphic_eq"><i class="material-icons">graphic_eq</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="grid_off"><i class="material-icons">grid_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="grid_on"><i class="material-icons">grid_on</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="group"><i class="material-icons">group</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="group_add"><i class="material-icons">group_add</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="group_work"><i class="material-icons">group_work</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="hd"><i class="material-icons">hd</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="hdr_off"><i class="material-icons">hdr_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="hdr_on"><i class="material-icons">hdr_on</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="hdr_strong"><i class="material-icons">hdr_strong</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="hdr_weak"><i class="material-icons">hdr_weak</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="headset"><i class="material-icons">headset</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="headset_mic"><i class="material-icons">headset_mic</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="healing"><i class="material-icons">healing</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="hearing"><i class="material-icons">hearing</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="help"><i class="material-icons">help</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="help_outline"><i class="material-icons">help_outline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="high_quality"><i class="material-icons">high_quality</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="highlight"><i class="material-icons">highlight</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="highlight_off"><i class="material-icons">highlight_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="history"><i class="material-icons">history</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="home"><i class="material-icons">home</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="hot_tub"><i class="material-icons">hot_tub</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="hotel"><i class="material-icons">hotel</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="hourglass_empty"><i class="material-icons">hourglass_empty</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="hourglass_full"><i class="material-icons">hourglass_full</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="http"><i class="material-icons">http</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="https"><i class="material-icons">https</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="image"><i class="material-icons">image</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="image_aspect_ratio"><i class="material-icons">image_aspect_ratio</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="import_contacts"><i class="material-icons">import_contacts</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="import_export"><i class="material-icons">import_export</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="important_devices"><i class="material-icons">important_devices</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="inbox"><i class="material-icons">inbox</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="indeterminate_check_box"><i class="material-icons">indeterminate_check_box</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="info"><i class="material-icons">info</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="info_outline"><i class="material-icons">info_outline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="input"><i class="material-icons">input</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="insert_chart"><i class="material-icons">insert_chart</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="insert_comment"><i class="material-icons">insert_comment</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="insert_drive_file"><i class="material-icons">insert_drive_file</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="insert_emoticon"><i class="material-icons">insert_emoticon</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="insert_invitation"><i class="material-icons">insert_invitation</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="insert_link"><i class="material-icons">insert_link</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="insert_photo"><i class="material-icons">insert_photo</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="invert_colors"><i class="material-icons">invert_colors</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="invert_colors_off"><i class="material-icons">invert_colors_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="iso"><i class="material-icons">iso</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="keyboard"><i class="material-icons">keyboard</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="keyboard_arrow_down"><i class="material-icons">keyboard_arrow_down</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="keyboard_arrow_left"><i class="material-icons">keyboard_arrow_left</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="keyboard_arrow_right"><i class="material-icons">keyboard_arrow_right</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="keyboard_arrow_up"><i class="material-icons">keyboard_arrow_up</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="keyboard_backspace"><i class="material-icons">keyboard_backspace</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="keyboard_capslock"><i class="material-icons">keyboard_capslock</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="keyboard_hide"><i class="material-icons">keyboard_hide</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="keyboard_return"><i class="material-icons">keyboard_return</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="keyboard_tab"><i class="material-icons">keyboard_tab</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="keyboard_voice"><i class="material-icons">keyboard_voice</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="kitchen"><i class="material-icons">kitchen</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="label"><i class="material-icons">label</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="label_outline"><i class="material-icons">label_outline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="landscape"><i class="material-icons">landscape</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="language"><i class="material-icons">language</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="laptop"><i class="material-icons">laptop</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="laptop_chromebook"><i class="material-icons">laptop_chromebook</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="laptop_mac"><i class="material-icons">laptop_mac</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="laptop_windows"><i class="material-icons">laptop_windows</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="last_page"><i class="material-icons">last_page</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="launch"><i class="material-icons">launch</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="layers"><i class="material-icons">layers</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="layers_clear"><i class="material-icons">layers_clear</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="leak_add"><i class="material-icons">leak_add</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="leak_remove"><i class="material-icons">leak_remove</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="lens"><i class="material-icons">lens</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="library_add"><i class="material-icons">library_add</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="library_books"><i class="material-icons">library_books</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="library_music"><i class="material-icons">library_music</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="lightbulb_outline"><i class="material-icons">lightbulb_outline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="line_style"><i class="material-icons">line_style</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="line_weight"><i class="material-icons">line_weight</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="linear_scale"><i class="material-icons">linear_scale</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="link"><i class="material-icons">link</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="linked_camera"><i class="material-icons">linked_camera</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="list"><i class="material-icons">list</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="live_help"><i class="material-icons">live_help</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="live_tv"><i class="material-icons">live_tv</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_activity"><i class="material-icons">local_activity</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_airport"><i class="material-icons">local_airport</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_atm"><i class="material-icons">local_atm</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_bar"><i class="material-icons">local_bar</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_cafe"><i class="material-icons">local_cafe</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_car_wash"><i class="material-icons">local_car_wash</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_convenience_store"><i class="material-icons">local_convenience_store</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_dining"><i class="material-icons">local_dining</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_drink"><i class="material-icons">local_drink</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_florist"><i class="material-icons">local_florist</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_gas_station"><i class="material-icons">local_gas_station</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_grocery_store"><i class="material-icons">local_grocery_store</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_hospital"><i class="material-icons">local_hospital</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_hotel"><i class="material-icons">local_hotel</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_laundry_service"><i class="material-icons">local_laundry_service</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_library"><i class="material-icons">local_library</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_mall"><i class="material-icons">local_mall</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_movies"><i class="material-icons">local_movies</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_offer"><i class="material-icons">local_offer</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_parking"><i class="material-icons">local_parking</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_pharmacy"><i class="material-icons">local_pharmacy</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_phone"><i class="material-icons">local_phone</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_pizza"><i class="material-icons">local_pizza</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_play"><i class="material-icons">local_play</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_post_office"><i class="material-icons">local_post_office</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_printshop"><i class="material-icons">local_printshop</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_see"><i class="material-icons">local_see</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_shipping"><i class="material-icons">local_shipping</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="local_taxi"><i class="material-icons">local_taxi</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="location_city"><i class="material-icons">location_city</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="location_disabled"><i class="material-icons">location_disabled</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="location_off"><i class="material-icons">location_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="location_on"><i class="material-icons">location_on</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="location_searching"><i class="material-icons">location_searching</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="lock"><i class="material-icons">lock</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="lock_open"><i class="material-icons">lock_open</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="lock_outline"><i class="material-icons">lock_outline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="looks"><i class="material-icons">looks</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="looks_3"><i class="material-icons">looks_3</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="looks_4"><i class="material-icons">looks_4</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="looks_5"><i class="material-icons">looks_5</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="looks_6"><i class="material-icons">looks_6</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="looks_one"><i class="material-icons">looks_one</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="looks_two"><i class="material-icons">looks_two</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="loop"><i class="material-icons">loop</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="loupe"><i class="material-icons">loupe</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="low_priority"><i class="material-icons">low_priority</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="loyalty"><i class="material-icons">loyalty</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="mail"><i class="material-icons">mail</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="mail_outline"><i class="material-icons">mail_outline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="map"><i class="material-icons">map</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="markunread"><i class="material-icons">markunread</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="markunread_mailbox"><i class="material-icons">markunread_mailbox</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="memory"><i class="material-icons">memory</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="menu"><i class="material-icons">menu</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="merge_type"><i class="material-icons">merge_type</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="message"><i class="material-icons">message</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="mic"><i class="material-icons">mic</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="mic_none"><i class="material-icons">mic_none</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="mic_off"><i class="material-icons">mic_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="mms"><i class="material-icons">mms</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="mode_comment"><i class="material-icons">mode_comment</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="mode_edit"><i class="material-icons">mode_edit</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="monetization_on"><i class="material-icons">monetization_on</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="money_off"><i class="material-icons">money_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="monochrome_photos"><i class="material-icons">monochrome_photos</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="mood"><i class="material-icons">mood</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="mood_bad"><i class="material-icons">mood_bad</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="more"><i class="material-icons">more</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="more_horiz"><i class="material-icons">more_horiz</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="more_vert"><i class="material-icons">more_vert</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="motorcycle"><i class="material-icons">motorcycle</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="mouse"><i class="material-icons">mouse</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="move_to_inbox"><i class="material-icons">move_to_inbox</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="movie"><i class="material-icons">movie</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="movie_creation"><i class="material-icons">movie_creation</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="movie_filter"><i class="material-icons">movie_filter</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="multiline_chart"><i class="material-icons">multiline_chart</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="music_note"><i class="material-icons">music_note</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="music_video"><i class="material-icons">music_video</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="my_location"><i class="material-icons">my_location</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="nature"><i class="material-icons">nature</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="nature_people"><i class="material-icons">nature_people</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="navigate_before"><i class="material-icons">navigate_before</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="navigate_next"><i class="material-icons">navigate_next</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="navigation"><i class="material-icons">navigation</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="near_me"><i class="material-icons">near_me</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="network_cell"><i class="material-icons">network_cell</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="network_check"><i class="material-icons">network_check</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="network_locked"><i class="material-icons">network_locked</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="network_wifi"><i class="material-icons">network_wifi</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="new_releases"><i class="material-icons">new_releases</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="next_week"><i class="material-icons">next_week</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="nfc"><i class="material-icons">nfc</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="no_encryption"><i class="material-icons">no_encryption</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="no_sim"><i class="material-icons">no_sim</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="not_interested"><i class="material-icons">not_interested</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="note"><i class="material-icons">note</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="note_add"><i class="material-icons">note_add</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="notifications"><i class="material-icons">notifications</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="notifications_active"><i class="material-icons">notifications_active</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="notifications_none"><i class="material-icons">notifications_none</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="notifications_off"><i class="material-icons">notifications_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="notifications_paused"><i class="material-icons">notifications_paused</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="offline_pin"><i class="material-icons">offline_pin</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="ondemand_video"><i class="material-icons">ondemand_video</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="opacity"><i class="material-icons">opacity</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="open_in_browser"><i class="material-icons">open_in_browser</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="open_in_new"><i class="material-icons">open_in_new</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="open_with"><i class="material-icons">open_with</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="pages"><i class="material-icons">pages</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="pageview"><i class="material-icons">pageview</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="palette"><i class="material-icons">palette</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="pan_tool"><i class="material-icons">pan_tool</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="panorama"><i class="material-icons">panorama</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="panorama_fish_eye"><i class="material-icons">panorama_fish_eye</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="panorama_horizontal"><i class="material-icons">panorama_horizontal</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="panorama_vertical"><i class="material-icons">panorama_vertical</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="panorama_wide_angle"><i class="material-icons">panorama_wide_angle</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="party_mode"><i class="material-icons">party_mode</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="pause"><i class="material-icons">pause</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="pause_circle_filled"><i class="material-icons">pause_circle_filled</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="pause_circle_outline"><i class="material-icons">pause_circle_outline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="payment"><i class="material-icons">payment</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="people"><i class="material-icons">people</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="people_outline"><i class="material-icons">people_outline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="perm_camera_mic"><i class="material-icons">perm_camera_mic</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="perm_contact_calendar"><i class="material-icons">perm_contact_calendar</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="perm_data_setting"><i class="material-icons">perm_data_setting</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="perm_device_information"><i class="material-icons">perm_device_information</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="perm_identity"><i class="material-icons">perm_identity</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="perm_media"><i class="material-icons">perm_media</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="perm_phone_msg"><i class="material-icons">perm_phone_msg</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="perm_scan_wifi"><i class="material-icons">perm_scan_wifi</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="person"><i class="material-icons">person</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="person_add"><i class="material-icons">person_add</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="person_outline"><i class="material-icons">person_outline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="person_pin"><i class="material-icons">person_pin</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="person_pin_circle"><i class="material-icons">person_pin_circle</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="personal_video"><i class="material-icons">personal_video</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="pets"><i class="material-icons">pets</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phone"><i class="material-icons">phone</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phone_android"><i class="material-icons">phone_android</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phone_bluetooth_speaker"><i class="material-icons">phone_bluetooth_speaker</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phone_forwarded"><i class="material-icons">phone_forwarded</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phone_in_talk"><i class="material-icons">phone_in_talk</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phone_iphone"><i class="material-icons">phone_iphone</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phone_locked"><i class="material-icons">phone_locked</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phone_missed"><i class="material-icons">phone_missed</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phone_paused"><i class="material-icons">phone_paused</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phonelink"><i class="material-icons">phonelink</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phonelink_erase"><i class="material-icons">phonelink_erase</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phonelink_lock"><i class="material-icons">phonelink_lock</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phonelink_off"><i class="material-icons">phonelink_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phonelink_ring"><i class="material-icons">phonelink_ring</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="phonelink_setup"><i class="material-icons">phonelink_setup</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="photo"><i class="material-icons">photo</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="photo_album"><i class="material-icons">photo_album</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="photo_camera"><i class="material-icons">photo_camera</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="photo_filter"><i class="material-icons">photo_filter</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="photo_library"><i class="material-icons">photo_library</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="photo_size_select_actual"><i class="material-icons">photo_size_select_actual</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="photo_size_select_large"><i class="material-icons">photo_size_select_large</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="photo_size_select_small"><i class="material-icons">photo_size_select_small</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="picture_as_pdf"><i class="material-icons">picture_as_pdf</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="picture_in_picture"><i class="material-icons">picture_in_picture</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="picture_in_picture_alt"><i class="material-icons">picture_in_picture_alt</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="pie_chart"><i class="material-icons">pie_chart</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="pie_chart_outlined"><i class="material-icons">pie_chart_outlined</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="pin_drop"><i class="material-icons">pin_drop</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="place"><i class="material-icons">place</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="play_arrow"><i class="material-icons">play_arrow</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="play_circle_filled"><i class="material-icons">play_circle_filled</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="play_circle_outline"><i class="material-icons">play_circle_outline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="play_for_work"><i class="material-icons">play_for_work</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="playlist_add"><i class="material-icons">playlist_add</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="playlist_add_check"><i class="material-icons">playlist_add_check</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="playlist_play"><i class="material-icons">playlist_play</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="plus_one"><i class="material-icons">plus_one</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="poll"><i class="material-icons">poll</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="polymer"><i class="material-icons">polymer</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="pool"><i class="material-icons">pool</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="portable_wifi_off"><i class="material-icons">portable_wifi_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="portrait"><i class="material-icons">portrait</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="power"><i class="material-icons">power</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="power_input"><i class="material-icons">power_input</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="power_settings_new"><i class="material-icons">power_settings_new</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="pregnant_woman"><i class="material-icons">pregnant_woman</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="present_to_all"><i class="material-icons">present_to_all</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="print"><i class="material-icons">print</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="priority_high"><i class="material-icons">priority_high</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="public"><i class="material-icons">public</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="publish"><i class="material-icons">publish</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="query_builder"><i class="material-icons">query_builder</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="question_answer"><i class="material-icons">question_answer</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="queue"><i class="material-icons">queue</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="queue_music"><i class="material-icons">queue_music</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="queue_play_next"><i class="material-icons">queue_play_next</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="radio"><i class="material-icons">radio</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="radio_button_checked"><i class="material-icons">radio_button_checked</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="radio_button_unchecked"><i class="material-icons">radio_button_unchecked</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="rate_review"><i class="material-icons">rate_review</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="receipt"><i class="material-icons">receipt</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="recent_actors"><i class="material-icons">recent_actors</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="record_voice_over"><i class="material-icons">record_voice_over</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="redeem"><i class="material-icons">redeem</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="redo"><i class="material-icons">redo</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="refresh"><i class="material-icons">refresh</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="remove"><i class="material-icons">remove</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="remove_circle"><i class="material-icons">remove_circle</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="remove_circle_outline"><i class="material-icons">remove_circle_outline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="remove_from_queue"><i class="material-icons">remove_from_queue</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="remove_red_eye"><i class="material-icons">remove_red_eye</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="remove_shopping_cart"><i class="material-icons">remove_shopping_cart</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="reorder"><i class="material-icons">reorder</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="repeat"><i class="material-icons">repeat</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="repeat_one"><i class="material-icons">repeat_one</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="replay"><i class="material-icons">replay</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="replay_10"><i class="material-icons">replay_10</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="replay_30"><i class="material-icons">replay_30</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="replay_5"><i class="material-icons">replay_5</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="reply"><i class="material-icons">reply</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="reply_all"><i class="material-icons">reply_all</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="report"><i class="material-icons">report</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="report_problem"><i class="material-icons">report_problem</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="restaurant"><i class="material-icons">restaurant</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="restaurant_menu"><i class="material-icons">restaurant_menu</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="restore"><i class="material-icons">restore</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="restore_page"><i class="material-icons">restore_page</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="ring_volume"><i class="material-icons">ring_volume</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="room"><i class="material-icons">room</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="room_service"><i class="material-icons">room_service</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="rotate_90_degrees_ccw"><i class="material-icons">rotate_90_degrees_ccw</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="rotate_left"><i class="material-icons">rotate_left</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="rotate_right"><i class="material-icons">rotate_right</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="rounded_corner"><i class="material-icons">rounded_corner</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="router"><i class="material-icons">router</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="rowing"><i class="material-icons">rowing</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="rss_feed"><i class="material-icons">rss_feed</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="rv_hookup"><i class="material-icons">rv_hookup</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="satellite"><i class="material-icons">satellite</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="save"><i class="material-icons">save</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="scanner"><i class="material-icons">scanner</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="schedule"><i class="material-icons">schedule</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="school"><i class="material-icons">school</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="screen_lock_landscape"><i class="material-icons">screen_lock_landscape</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="screen_lock_portrait"><i class="material-icons">screen_lock_portrait</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="screen_lock_rotation"><i class="material-icons">screen_lock_rotation</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="screen_rotation"><i class="material-icons">screen_rotation</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="screen_share"><i class="material-icons">screen_share</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sd_card"><i class="material-icons">sd_card</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sd_storage"><i class="material-icons">sd_storage</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="search"><i class="material-icons">search</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="security"><i class="material-icons">security</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="select_all"><i class="material-icons">select_all</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="send"><i class="material-icons">send</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sentiment_dissatisfied"><i class="material-icons">sentiment_dissatisfied</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sentiment_neutral"><i class="material-icons">sentiment_neutral</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sentiment_satisfied"><i class="material-icons">sentiment_satisfied</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sentiment_very_dissatisfied"><i class="material-icons">sentiment_very_dissatisfied</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sentiment_very_satisfied"><i class="material-icons">sentiment_very_satisfied</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings"><i class="material-icons">settings</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_applications"><i class="material-icons">settings_applications</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_backup_restore"><i class="material-icons">settings_backup_restore</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_bluetooth"><i class="material-icons">settings_bluetooth</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_brightness"><i class="material-icons">settings_brightness</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_cell"><i class="material-icons">settings_cell</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_ethernet"><i class="material-icons">settings_ethernet</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_input_antenna"><i class="material-icons">settings_input_antenna</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_input_component"><i class="material-icons">settings_input_component</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_input_composite"><i class="material-icons">settings_input_composite</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_input_hdmi"><i class="material-icons">settings_input_hdmi</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_input_svideo"><i class="material-icons">settings_input_svideo</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_overscan"><i class="material-icons">settings_overscan</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_phone"><i class="material-icons">settings_phone</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_power"><i class="material-icons">settings_power</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_remote"><i class="material-icons">settings_remote</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_system_daydream"><i class="material-icons">settings_system_daydream</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="settings_voice"><i class="material-icons">settings_voice</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="share"><i class="material-icons">share</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="shop"><i class="material-icons">shop</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="shop_two"><i class="material-icons">shop_two</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="shopping_basket"><i class="material-icons">shopping_basket</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="shopping_cart"><i class="material-icons">shopping_cart</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="short_text"><i class="material-icons">short_text</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="show_chart"><i class="material-icons">show_chart</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="shuffle"><i class="material-icons">shuffle</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="signal_cellular_4_bar"><i class="material-icons">signal_cellular_4_bar</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="signal_cellular_connected_no_internet_4_bar"><i class="material-icons">signal_cellular_connected_no_internet_4_bar</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="signal_cellular_no_sim"><i class="material-icons">signal_cellular_no_sim</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="signal_cellular_null"><i class="material-icons">signal_cellular_null</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="signal_cellular_off"><i class="material-icons">signal_cellular_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="signal_wifi_4_bar"><i class="material-icons">signal_wifi_4_bar</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="signal_wifi_4_bar_lock"><i class="material-icons">signal_wifi_4_bar_lock</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="signal_wifi_off"><i class="material-icons">signal_wifi_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sim_card"><i class="material-icons">sim_card</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sim_card_alert"><i class="material-icons">sim_card_alert</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="skip_next"><i class="material-icons">skip_next</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="skip_previous"><i class="material-icons">skip_previous</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="slideshow"><i class="material-icons">slideshow</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="slow_motion_video"><i class="material-icons">slow_motion_video</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="smartphone"><i class="material-icons">smartphone</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="smoke_free"><i class="material-icons">smoke_free</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="smoking_rooms"><i class="material-icons">smoking_rooms</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sms"><i class="material-icons">sms</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sms_failed"><i class="material-icons">sms_failed</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="snooze"><i class="material-icons">snooze</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sort"><i class="material-icons">sort</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sort_by_alpha"><i class="material-icons">sort_by_alpha</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="spa"><i class="material-icons">spa</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="space_bar"><i class="material-icons">space_bar</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="speaker"><i class="material-icons">speaker</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="speaker_group"><i class="material-icons">speaker_group</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="speaker_notes"><i class="material-icons">speaker_notes</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="speaker_notes_off"><i class="material-icons">speaker_notes_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="speaker_phone"><i class="material-icons">speaker_phone</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="spellcheck"><i class="material-icons">spellcheck</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="star"><i class="material-icons">star</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="star_border"><i class="material-icons">star_border</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="star_half"><i class="material-icons">star_half</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="stars"><i class="material-icons">stars</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="stay_current_landscape"><i class="material-icons">stay_current_landscape</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="stay_current_portrait"><i class="material-icons">stay_current_portrait</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="stay_primary_landscape"><i class="material-icons">stay_primary_landscape</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="stay_primary_portrait"><i class="material-icons">stay_primary_portrait</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="stop"><i class="material-icons">stop</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="stop_screen_share"><i class="material-icons">stop_screen_share</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="storage"><i class="material-icons">storage</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="store"><i class="material-icons">store</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="store_mall_directory"><i class="material-icons">store_mall_directory</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="straighten"><i class="material-icons">straighten</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="streetview"><i class="material-icons">streetview</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="strikethrough_s"><i class="material-icons">strikethrough_s</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="style"><i class="material-icons">style</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="subdirectory_arrow_left"><i class="material-icons">subdirectory_arrow_left</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="subdirectory_arrow_right"><i class="material-icons">subdirectory_arrow_right</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="subject"><i class="material-icons">subject</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="subscriptions"><i class="material-icons">subscriptions</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="subtitles"><i class="material-icons">subtitles</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="subway"><i class="material-icons">subway</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="supervisor_account"><i class="material-icons">supervisor_account</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="surround_sound"><i class="material-icons">surround_sound</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="swap_calls"><i class="material-icons">swap_calls</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="swap_horiz"><i class="material-icons">swap_horiz</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="swap_vert"><i class="material-icons">swap_vert</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="swap_vertical_circle"><i class="material-icons">swap_vertical_circle</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="switch_camera"><i class="material-icons">switch_camera</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="switch_video"><i class="material-icons">switch_video</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sync"><i class="material-icons">sync</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sync_disabled"><i class="material-icons">sync_disabled</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="sync_problem"><i class="material-icons">sync_problem</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="system_update"><i class="material-icons">system_update</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="system_update_alt"><i class="material-icons">system_update_alt</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="tab"><i class="material-icons">tab</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="tab_unselected"><i class="material-icons">tab_unselected</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="tablet"><i class="material-icons">tablet</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="tablet_android"><i class="material-icons">tablet_android</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="tablet_mac"><i class="material-icons">tablet_mac</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="tag_faces"><i class="material-icons">tag_faces</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="tap_and_play"><i class="material-icons">tap_and_play</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="terrain"><i class="material-icons">terrain</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="text_fields"><i class="material-icons">text_fields</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="text_format"><i class="material-icons">text_format</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="textsms"><i class="material-icons">textsms</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="texture"><i class="material-icons">texture</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="theaters"><i class="material-icons">theaters</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="thumb_down"><i class="material-icons">thumb_down</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="thumb_up"><i class="material-icons">thumb_up</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="thumbs_up_down"><i class="material-icons">thumbs_up_down</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="time_to_leave"><i class="material-icons">time_to_leave</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="timelapse"><i class="material-icons">timelapse</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="timeline"><i class="material-icons">timeline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="timer"><i class="material-icons">timer</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="timer_10"><i class="material-icons">timer_10</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="timer_3"><i class="material-icons">timer_3</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="timer_off"><i class="material-icons">timer_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="title"><i class="material-icons">title</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="toc"><i class="material-icons">toc</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="today"><i class="material-icons">today</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="toll"><i class="material-icons">toll</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="tonality"><i class="material-icons">tonality</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="touch_app"><i class="material-icons">touch_app</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="toys"><i class="material-icons">toys</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="track_changes"><i class="material-icons">track_changes</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="traffic"><i class="material-icons">traffic</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="train"><i class="material-icons">train</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="tram"><i class="material-icons">tram</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="transfer_within_a_station"><i class="material-icons">transfer_within_a_station</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="transform"><i class="material-icons">transform</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="translate"><i class="material-icons">translate</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="trending_down"><i class="material-icons">trending_down</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="trending_flat"><i class="material-icons">trending_flat</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="trending_up"><i class="material-icons">trending_up</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="tune"><i class="material-icons">tune</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="turned_in"><i class="material-icons">turned_in</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="turned_in_not"><i class="material-icons">turned_in_not</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="tv"><i class="material-icons">tv</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="unarchive"><i class="material-icons">unarchive</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="undo"><i class="material-icons">undo</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="unfold_less"><i class="material-icons">unfold_less</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="unfold_more"><i class="material-icons">unfold_more</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="update"><i class="material-icons">update</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="usb"><i class="material-icons">usb</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="verified_user"><i class="material-icons">verified_user</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="vertical_align_bottom"><i class="material-icons">vertical_align_bottom</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="vertical_align_center"><i class="material-icons">vertical_align_center</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="vertical_align_top"><i class="material-icons">vertical_align_top</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="vibration"><i class="material-icons">vibration</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="video_call"><i class="material-icons">video_call</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="video_label"><i class="material-icons">video_label</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="video_library"><i class="material-icons">video_library</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="videocam"><i class="material-icons">videocam</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="videocam_off"><i class="material-icons">videocam_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="videogame_asset"><i class="material-icons">videogame_asset</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="view_agenda"><i class="material-icons">view_agenda</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="view_array"><i class="material-icons">view_array</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="view_carousel"><i class="material-icons">view_carousel</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="view_column"><i class="material-icons">view_column</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="view_comfy"><i class="material-icons">view_comfy</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="view_compact"><i class="material-icons">view_compact</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="view_day"><i class="material-icons">view_day</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="view_headline"><i class="material-icons">view_headline</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="view_list"><i class="material-icons">view_list</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="view_module"><i class="material-icons">view_module</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="view_quilt"><i class="material-icons">view_quilt</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="view_stream"><i class="material-icons">view_stream</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="view_week"><i class="material-icons">view_week</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="vignette"><i class="material-icons">vignette</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="visibility"><i class="material-icons">visibility</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="visibility_off"><i class="material-icons">visibility_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="voice_chat"><i class="material-icons">voice_chat</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="voicemail"><i class="material-icons">voicemail</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="volume_down"><i class="material-icons">volume_down</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="volume_mute"><i class="material-icons">volume_mute</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="volume_off"><i class="material-icons">volume_off</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="volume_up"><i class="material-icons">volume_up</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="vpn_key"><i class="material-icons">vpn_key</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="vpn_lock"><i class="material-icons">vpn_lock</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="wallpaper"><i class="material-icons">wallpaper</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="warning"><i class="material-icons">warning</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="watch"><i class="material-icons">watch</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="watch_later"><i class="material-icons">watch_later</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="wb_auto"><i class="material-icons">wb_auto</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="wb_cloudy"><i class="material-icons">wb_cloudy</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="wb_incandescent"><i class="material-icons">wb_incandescent</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="wb_iridescent"><i class="material-icons">wb_iridescent</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="wb_sunny"><i class="material-icons">wb_sunny</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="wc"><i class="material-icons">wc</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="web"><i class="material-icons">web</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="web_asset"><i class="material-icons">web_asset</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="weekend"><i class="material-icons">weekend</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="whatshot"><i class="material-icons">whatshot</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="widgets"><i class="material-icons">widgets</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="wifi"><i class="material-icons">wifi</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="wifi_lock"><i class="material-icons">wifi_lock</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="wifi_tethering"><i class="material-icons">wifi_tethering</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="work"><i class="material-icons">work</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="wrap_text"><i class="material-icons">wrap_text</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="youtube_searched_for"><i class="material-icons">youtube_searched_for</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="zoom_in"><i class="material-icons">zoom_in</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="zoom_out"><i class="material-icons">zoom_out</i></div>
+		<div class="wrapper--material-icons" data-target="#sampleModal" data-toggle="modal" data-mi="zoom_out_map"><i class="material-icons">zoom_out_map</i></div>
+	</div>
+
+	<div class="modal fade" id="sampleModal" style="top:150px;">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	        <!-- <div class="modal-header">
+	          <h4>
+	              Header 4 <small>(h4)</small>
+	              <span class="close" data-dismiss="modal">×</span>
+	          </h4>
+	        </div> -->
+	        <div class="modal-body">
+	        	<h3 id="okay" class="text-center" style="font-family:'Arial';opacity:0.74;">Copied to Clipboard!</h3>
+	        </div>
+	        <!-- <div class="modal-footer">
+	          <button class="btn btn-default" data-dismiss="modal">Close</button>
+	          <button class="btn btn-primary">Save Changes</button>
+	        </div> -->
+	      </div>
+	    </div>
+  	</div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/tweenmax.min.js"></script>
+	<script src="js/list.min.js"></script>
+	<script>
+		/*
+			$('#exampleModal').on('show.bs.modal', function (event) {
+			  var button = $(event.relatedTarget) // Button that triggered the modal
+			  var recipient = button.data('whatever') // Extract info from data-* attributes
+			  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+			  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+			  var modal = $(this)
+			  modal.find('.modal-title').text('New message to ' + recipient)
+			  modal.find('.modal-body input').val(recipient)
+			})
+		*/
+
+		$('#sampleModal').on('show.bs.modal',(e)=>{
+			// material icon
+			var mi = $(e.relatedTarget).data('mi')
+			// mi = mi.replace(/_/g, ' ')
+			/*$(e.target).find('#okay').text(mi)
+			$('#okay').focus()*/
+
+			// copy to clipboard technique
+			var clipboard = document.createElement('input')
+			document.body.appendChild(clipboard)
+			clipboard.setAttribute('id','clipboard')
+			document.getElementById('clipboard').value = mi
+			clipboard.select()
+			document.execCommand('copy')
+			document.body.removeChild(clipboard)
+
+			// Preview
+			$('#preview').text(mi)
+			$('#preview-text').text('<i class="material-icons">'+mi+'</i>')
+
+			setTimeout(()=>{
+				$('#sampleModal').modal('hide')
+			},1500)
+
+		})
+
+
+
+
+		$(document).ready(()=>{
+
+			var n = $('.wrapper--material-icons').length
+			var rnd = Math.floor(Math.random() * n) + 1
+			var mi = $('.wrapper--material-icons:nth-child('+rnd+')').find('i').text()
+			$('#preview').text(mi) 
+			$('#preview-text').text('<i class="material-icons">'+mi+'</i>')
+
+			$('#search').on('keyup',(e)=>{
+				// if (e.keyCode == 13) {
+
+					var text = $(e.currentTarget).val()
+					var re = new RegExp(text,'g')
+
+					$('.list .wrapper--material-icons').each((i,obj)=>{
+						if (re.test($(obj).data('mi'))) {
+							$(obj).css('display','inline-block')
+						} else {
+							$(obj).css('display','none')
+						}
+					})
+				// }
+
+			})
+
+			// $('#search').focus()
+			$('#search').on('click',()=>{
+				$('#search')[0].select()
+			})
+
+		})
+	</script>
+</body>
+</html>

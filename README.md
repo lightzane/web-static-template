@@ -29,3 +29,22 @@ My web (HTML) static template.
 </body>
 </html>
 ```
+
+[//]: # ("material.io" vvv )
+
+### Extras
+Creating a cheatsheet to view the Material Icons ```css/fonts/MaterialIcons-list.txt``` using Regular Expressions.<br>
+**Note**: Use a texteditor that can use a regular expression.
+
+#### Steps
+1. **Open** the *material icons* ```.txt``` file
+2. **Copy** all the contents
+3. **Paste** in a blank text file.
+4. **Open** the **Find and Replace** window.
+5. **Find** ```\w+```
+6. Use snippet below to put in your **Replace**:
+```
+	<i class="material-icons">$&</i>
+
+```
+**Lesson**: ```$&``` is the backreference to the whole match (regular expression)
